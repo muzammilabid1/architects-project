@@ -103,8 +103,13 @@ span {
   line-height: 2.6rem;
   text-align: justify;
 }
-input,
-:focus-visible {
+input:focus-visible {
+  /* only styles that change on focus */
+  outline: none;
+  box-shadow: rgb(73, 73, 73) 0px 13px 27px -5px, rgba(0, 0, 0, 0.511) 0px 8px 16px -8px;
+}
+input{
+  padding-left: 1.5rem !important;
   display: inline-block;
   font-size: 1.8rem;
   /* text-transform: capitalize; */
@@ -121,6 +126,8 @@ input,
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   cursor: pointer;
+  padding-left: 0;       
+  text-indent: 0;  
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -129,11 +136,13 @@ input,
 }
 ::placeholder {
   font-size: 1.8rem;
+  padding-left: 0;    
+  text-indent: 0;  
   text-transform: capitalize;
   color: var(--nav-color);
-  padding-left: .5rem;
+  /* padding-left: .5rem; */
 }
-
+  
 /*?* stats */
 .navbar-div a:hover {
   color: var(--nav-color);
@@ -634,9 +643,6 @@ input:hover::placeholder {
   }
 }
 @media (width<=420px) {
-  input{
-    width: 30rem;
-  }
   .section-contact{
     margin-left: -0.8rem;
   }
@@ -658,15 +664,19 @@ input:hover::placeholder {
   }
   .contact-form .sumbit{
     width: 15rem; 
-    margin-left: 10rem;
+    margin-left: 15rem;
   }
   input{
-    width: 30rem;
-    margin-left: .1rem;
-    margin-left: 4rem;
+    width: 36rem;
+    margin-left: 6rem;
   }
 }
-@media (width<375px) {
+@media (width<=408px) {
+  input{
+    width: 38 rem;
+  }
+}
+@media (width<384px) {
   .section-hero .hero-div {
     & .hero-para {
       translate: -10rem 0;
@@ -680,12 +690,12 @@ input:hover::placeholder {
   }
   .contact-form .sumbit{
     width: 15rem; 
-    margin-left: 10rem;
+    margin-left: 14rem;
   }
 
   input{
-    width: 30rem;
-    margin-right: 2rem;
+    width: 32rem;
+    margin-right: 3rem;
   }
   .section-contact{
     margin-left: -0.8rem;
@@ -703,12 +713,20 @@ input:hover::placeholder {
     }
   }
 }
-@media (width<358px) {
+@media (width<374px) {
+  .contact-form .sumbit{
+    width: 15rem; 
+    margin-left: 11.8rem;
+  }
+  input{
+    width: 28rem;
+    margin-right: 3rem;
+  }
   .section-about .about-container--grid .grid{
     margin-left: -4.5rem;
 
     & .grid-image{
-      width: 28rem;
+      width: 30rem;
     }
   }
   .section-navbar .nav-content ul{
@@ -718,7 +736,8 @@ input:hover::placeholder {
     gap: 10rem;
   }
 }
-@media (width<335px) {
+@media (width<350px) {
+  
   .section-about .about-container--grid .grid{
     margin-left: -5rem;
 
@@ -739,26 +758,35 @@ input:hover::placeholder {
     gap: 7.9rem;
   }
   input{
-    width: 28rem;
+    width: 26rem;
   }
   .section-contact{
     margin-left: -0.8rem;
   }
-  /* .section-contact .sumbit{
+  .section-contact .sumbit{
     width: 15rem;
-    margin-left: 10rem;
-  } */
+    margin-left: 11rem;
+  }
 }
-@media (width<305px) {
+@media (width<335px) {
+  input{
+    width: 26rem;
+    margin-left: -.1rem; 
+    margin-left: 5rem;
+  }
+  .section-contact{
+    margin-left: -0.8rem;
+  }
+  .section-contact .sumbit{
+    width: 15rem;
+    margin-left: 11rem;
+  }
   .section-about .about-container--grid .grid{
     margin-left: -5rem;
 
     & .grid-image{
       width: 23rem;
     }
-  }
-  input{
-    width: 28rem;
   }
   .section-contact{
     margin-left: -2.5rem;
@@ -771,6 +799,34 @@ input:hover::placeholder {
     margin-left: 4rem;
     display: flex;
     gap: 7.9rem;
+  }
+}
+@media (width<319px) {
+  input{
+    width: 26rem;
+    margin-left: -.1rem; 
+    margin-left: 4rem;
+  }
+  .section-contact{
+    margin-left: -0.8rem;
+  }
+  .contact-form .sumbit{
+    width: 15rem; 
+    margin-left: 8.9rem;
+  }
+}
+@media (width<305px) {
+  input{
+    width: 26rem;
+    margin-left: -.1rem; 
+    margin-left: 3rem;
+  }
+  .section-contact{
+    margin-left: -0.8rem;
+  }
+  .contact-form .sumbit{
+    width: 15rem;
+    margin-left: 8rem;
   }
 }
 @media (width<291px) {
@@ -794,5 +850,33 @@ input:hover::placeholder {
     & .grid-image{
       width: 25rem;
     }
+  }
+}
+@media (width<=280px) {
+  input{
+    width: 23rem;
+    margin-left: -.1rem; 
+    margin-left: 3rem;
+  }
+  .section-contact{
+    margin-left: -0.8rem;
+  }
+  .contact-form .sumbit{
+    width: 13rem;
+    margin-left: 6.7rem;
+  }
+}
+@media (width<266px) {
+  input{
+    width: 26rem;
+    margin-left: -.1rem; 
+    margin-left: .4rem;
+  }
+  .section-contact{
+    margin-left: -0.8rem;
+  }
+  .contact-form .sumbit{
+    width: 15rem;
+    margin-left: 5  rem;
   }
 }

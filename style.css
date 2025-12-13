@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+img{object-fit: contain;}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -880,3 +881,4 @@ input:hover::placeholder {
     margin-left: 5  rem;
   }
 }
+
